@@ -21,7 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        // Создаем намерение, для создания нового окна
         Intent intent = new Intent(this, SecondActivity.class);
+
+        // Помещаем данные
+        intent.putExtra("num", 10);
+
+        // Создаем новое окно
         startActivity(intent);
     }
 }
